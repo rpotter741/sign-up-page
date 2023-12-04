@@ -1,0 +1,111 @@
+html {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.viewport {
+    display: flex;
+}
+
+body {
+    margin: 0;
+}
+
+.image {
+    flex: auto;
+    height: 100vh;
+    width: clamp(10%, 15%, 20%);
+    background-color: aqua;
+    background-image: url(https://cdn.midjourney.com/27392101-39e8-404a-9041-078bf77e6841/0_3.webp);
+}
+
+.formSide {
+    flex: 3 1 0;
+    height: 100vh;
+    background-image: linear-gradient(#395873, #293947);
+}
+
+h2 {
+    font-size: clamp(24px, 30px, 36px);
+    width: clamp(20%, 55%, 75%);
+    padding: 4rem;
+    font-style: italic;
+}
+
+h4 {
+    font-size: clamp(12px, 20px, 28px);
+    padding: 12px;
+    margin-left: 4rem;
+}
+
+form {
+    margin-top: 1rem;
+    padding: 3rem;
+    background-color: rgba(3, 252, 227, .13);
+}
+
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: clamp(12%, 48%, 48%);
+    padding: 0 1%;
+    flex: auto;
+    overflow: hidden;
+}
+
+.button {
+    width: 100%;
+}
+
+
+label {
+    display: inline-block;
+    text-align: left;
+    font-size: 80%;
+    font-family: 'fantasy';
+}
+
+input {
+    width: 65%;
+    height: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 5%;
+    margin-right: 20%;
+    border-radius: 4px;
+    border: solid black 1px;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    float: left;
+    width: 90px;
+    height: 30px;
+    border-radius: 4px;
+    margin: 0 1%;
+    
+}
+
+.imageCover {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    top: 17%;
+    background-color: rgba(3, 252, 227, .13);
+    width: 36.25%;
+    height: 12%;
+    text-align: center;
+}
+
+.coverText {
+    font-size: clamp(2rem, 4rem, 6rem);
+}
