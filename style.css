@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'myFont';
+    src: url(fonts/Ephesis-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Luminari';
+    src: url(fonts/Luminari-Regular.woff);
+}
+
 html {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    font-family: 'myFont', sans-serif;
 }
 
 .viewport {
@@ -15,14 +24,14 @@ body {
     flex: auto;
     height: 100vh;
     width: clamp(10%, 15%, 20%);
-    background-color: aqua;
     background-image: url(https://cdn.midjourney.com/27392101-39e8-404a-9041-078bf77e6841/0_3.webp);
+    background-size: cover;
 }
 
 .formSide {
     flex: 3 1 0;
-    height: 100vh;
-    background-image: linear-gradient(#395873, #293947);
+    background-image: linear-gradient(#223140, #294739);
+    font-family: 'Luminari';
 }
 
 h2 {
@@ -66,8 +75,9 @@ form {
 label {
     display: inline-block;
     text-align: left;
-    font-size: 80%;
-    font-family: 'fantasy';
+    font-size: 90%;
+    font-family: 'Luminari';
+    color: whitesmoke;
 }
 
 input {
@@ -78,7 +88,22 @@ input {
     margin-right: 20%;
     border-radius: 4px;
     border: solid black 1px;
+    font-family: 'Luminari';
 }
+
+
+input:invalid:required {
+    border: red solid 1px;
+}
+
+input:valid {
+    border: green 2px dotted;
+}
+
+input:hover {
+    border: orange 2px solid;
+}
+
 
 ul {
     list-style: none;
@@ -88,24 +113,34 @@ button {
     float: left;
     width: 90px;
     height: 30px;
-    border-radius: 4px;
+    border-radius: 0 10px 0 10px;
     margin: 0 1%;
+    background-color: tan;
+    font-family: 'Luminari';
+    box-shadow: #223140;
     
 }
 
 .imageCover {
-    position: absolute;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     left: 0;
-    top: 17%;
-    background-color: rgba(3, 252, 227, .13);
-    width: 36.25%;
-    height: 12%;
-    text-align: center;
+    margin-top: 17%;
+    background-image: url(https://watercolors.giantsoup.com/phb/phb_top-and-bottom/0001.png);
+    background-size: 17%;
+    width: stretch;
+    height: 18%;
+    padding-left: 2rem;
+    color: rgba(0,0,0, .5)
+
 }
 
 .coverText {
-    font-size: clamp(2rem, 4rem, 6rem);
+    font-size: 200%;
+}
+
+#logo {
+    width: 92px;
+    height: 92px;
 }
