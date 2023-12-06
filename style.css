@@ -14,15 +14,17 @@ html {
 
 .viewport {
     display: flex;
+    height: 100vh;
 }
 
 body {
     margin: 0;
+    height: 100vh;
+
 }
 
 .image {
     flex: auto;
-    height: 100vh;
     width: clamp(10%, 15%, 20%);
     background-image: url(https://cdn.midjourney.com/27392101-39e8-404a-9041-078bf77e6841/0_3.webp);
     background-size: cover;
@@ -32,6 +34,8 @@ body {
     flex: 3 1 0;
     background-image: linear-gradient(#223140, #294739);
     font-family: 'Luminari';
+    overflow-y:scroll;
+    
 }
 
 h2 {
@@ -67,9 +71,6 @@ form {
     overflow: hidden;
 }
 
-.button {
-    width: 100%;
-}
 
 
 label {
@@ -104,12 +105,16 @@ input:hover {
     border: orange 2px solid;
 }
 
+input:focus {
+    box-shadow: #223140;
+}
+
 
 ul {
     list-style: none;
 }
 
-button {
+#button {
     float: left;
     width: 90px;
     height: 30px;
@@ -118,8 +123,10 @@ button {
     background-color: tan;
     font-family: 'Luminari';
     box-shadow: #223140;
+    border: 1px solid black;
     
 }
+
 
 .imageCover {
     display: flex;
@@ -127,12 +134,12 @@ button {
     align-items: center;
     left: 0;
     margin-top: 17%;
-    background-image: url(https://watercolors.giantsoup.com/phb/phb_top-and-bottom/0001.png);
-    background-size: 17%;
+    background-color: rgba(5,5,5,.7);
     width: stretch;
     height: 18%;
     padding-left: 2rem;
-    color: rgba(0,0,0, .5)
+    color: rgba(245,245,245, .8);
+ 
 
 }
 
@@ -141,6 +148,6 @@ button {
 }
 
 #logo {
-    width: 92px;
-    height: 92px;
+    width: 200px;
+    height: 200px;
 }

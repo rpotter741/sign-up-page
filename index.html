@@ -12,21 +12,26 @@
         <div class="image">
             <div class="imageCover">
                 <div class="coverLogo"><img id="logo" src="/img/PR_logo_png.png" alt="logo"></div>
-                <div class="coverText">RobbiePottsDM Adventures&copy;</div>
+                <div class="coverText">RPDM</div>
             </div>
         </div>
         <div class="formSide">
             <h2>This is not a real online service! If you actually want to go adventuring, you'd be better off travelling, hiking, and experiencing the many beautiful cultures that exist around the world today!</h2>
             <h4> You <em>know</em> you want to...</h4>
-            <form>
+            <form action="tbd">
                 <div class="fields">
                     <div class="field"><label for="first_name">First Name:</label><input type="text" id="first_name" name="first_name" pattern="([A-Za-z]{2,})" placeholder="Sinok" required></div>
                     <div class="field"><label for="last_name">Last Name:</label><input type="text" id="last_name" name="last_name" pattern="([A-Za-z]{2,})" placeholder="Kai" required></div>
                     <div class="field"><label for="mail">Email:</label><input type="email" id="mail" name="mail" minlength="8" pattern="/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g" placeholder="sinokkai@mail.net" required></div>
-                    <div class="field"><label for="phone_number">Phone Number:</label><input type="number" id="phone_number" minlength="10" maxlength="15" name="phone_number" pattern="/(([2-9]\d{2}-\d{3}-\d{4})|(\([2-9]\d{2}\)-\d{3}-\d{4})|([2-9]\d{2}\.\d{3}\.\d{4}))([xX]\d{1,4})?/g" placeholder="3173173178" required></div>
-                    <div class="field"><label for="password">Password:</label><input type="password" id="password" name="password" pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm" required></div>
-                    <div class="field"><label for="confirm_password">Confirm Password:</label><input type="password" id="confirm_password" required></div>
-                    <div class="button"><button type="submit">Embark!</button></div>
+                    <div class="field"><label for="phone_number">Phone Number:</label><input type="number" id="phone_number" minlength="10" maxlength="15" name="phone_number" pattern="/(([2-9]\d{2}-\d{3}-\d{4})|(\([2-9]\d{2}\)-\d{3}-\d{4})|([2-9]\d{2}\.\d{3}\.\d{4}))([xX]\d{1,4})?/g" title="Please enter your phone number without any dashes or hyphens" placeholder="3173173178" required></div>
+                    <div class="field"><label for="password">Password:</label><input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Your password requires 1 lowercase letter, 1 uppercase letter, 1 number, and needs to be at least 8 characters long." required></div>
+                    <div class="field"><label for="confirm_password">Confirm Password:</label><input type="password" name="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="confirm_password" required></div>
+                    <input id="button" type="submit" value="Embark!">
+                       <span class="invalid" id="letter"></span>
+                       <span class="invalid" id="capital"></span>
+                       <span class="invalid" id="number"></span>
+                       <span class="invalid" id="length"></span>
+                    </div>
                 </div>
                 
             </form>
